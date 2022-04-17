@@ -1,0 +1,1689 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Пекарня Бриошь</title>
+
+        <!-- Google Fonts API -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+
+        <!-- Slick slider -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Swiper CSS styles -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- YouTube PopUp Player -->
+        <link rel="stylesheet" href="css/videotube.min.css">
+
+        <!-- Pushbar -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
+
+        <!-- Hamburgers -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css"
+            integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <!-- Magnific PopUp -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+            integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Main CSS styles -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/media_queries.css">
+    </head>
+
+    <body>
+
+        <div class="pushbar" data-pushbar-id="pushbar1" data-pushbar-direction="left">
+            <h2>Навигация</h2>
+            <ul>
+                <li><a href="#menu" onclick="burger.close();">
+                        Меню
+                    </a></li>
+                <li><a href="#discount" onclick="burger.close();">
+                        Акции
+                    </a></li>
+                <li><a href="#try" onclick="burger.close();">
+                        Новинки
+                    </a></li>
+                <li><a href="#whyWe" onclick="burger.close();">
+                        Почему мы
+                    </a></li>
+                <li><a href="#reviews" onclick="burger.close();">
+                        Отзывы
+                    </a></li>
+                <li><a href="#findUs" onclick="burger.close();">
+                        Контакты
+                    </a></li>
+            </ul>
+
+            <button data-pushbar-close class="btn btn-danger">Закрыть</button>
+        </div>
+
+        <div class="pushbar_main_content">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="hamburger-container" onclick="burger.open('pushbar1');">
+                            <a class="menuButton"
+                                onclick="javascript: void(0); /* this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened')); */"
+                                aria-label="Main Menu">
+                                <svg width="50" height="50" viewBox="0 0 100 100">
+                                    <path class="line line1"
+                                        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                                    <path class="line line2" d="M 20,50 H 80" />
+                                    <path class="line line3"
+                                        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="header container-fluid">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex justify-content-center align-items-center">
+                            <div class="logo-container"><img src="img/logo.svg" class="header-logo"
+                                    alt="Briosh logo image">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>новый день — новые возможности</h1>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <main class="main">
+                <div class="container">
+
+                    <div class="start" id="start">
+                        <div class="container start__container">
+                            <div class="row d-flex justify-content-center align-items-center" id="startRow">
+                                <div class="col-12 col-lg-6">
+                                    <img src="https://images.unsplash.com/photo-1579697096985-41fe1430e5df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
+                                        alt="Bakery photo"></div>
+                                <div class="col-12 col-lg-6">
+                                    <ul>
+                                        <li>
+                                            <p>Наши технологии изготовления всех видов кондитерских изделий, теплое и
+                                                качественное обслуживание в пекарнях «Бриошь», обеспечивают для Вас
+                                                любую линейку, которую можно только себе представить в Пекарне!
+                                                Торты на заказ, изделия любой сложности и всех видов исполнения, быстрой
+                                                и качественной доставкой окажутся за Вашим столом!</p>
+                                        </li>
+                                        <li>
+                                            <h3> С любовью, пекарня «Бриошь»</h3>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <i class="bi bi-play"></i>
+                                                <a href="https://www.youtube.com/watch?v=_UEb-uoFsuc"
+                                                    style="cursor: pointer;" class="tube">Смотреть видео</a>
+
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="start__discount" id="temp">
+                            <div class="container start__discount__container">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-6">
+                                        <div class="start__discount__image start__discount__image_1"></div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6" id="discount"
+                                        style="display:flex; justify-content:center; align-items:center;">
+                                        <div class="start__discount__text">
+                                            <div class="start__discount__text">
+                                                <div class="percent-30">
+                                                    <p>20%</p>
+                                                </div>
+                                                <div class="discount-text">СКИДКА</div>
+                                                <p>С 20:00 на всю продукцию, во всех пекарнях «Бриошь»!</p>
+                                                <p> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-0">
+                                        <div class="start__discount__image start__discount__image_2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="why-we" id="whyWe">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h2>почему мы?</h2>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                                        <h3>Качество и цена</h3>
+                                        <p>Пекарня «Бриошь» готовит свою продукцию только свежим и качественным
+                                            сырьем под руководством опытных кондитеров, чьи идейные соображения
+                                            создают высококачественный вкус и самые доступные цены!</p>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="why-we-image-container"><img
+                                                src="https://images.unsplash.com/photo-1507638940746-7b17d6b55b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80"
+                                                alt="Baker image" class="why-we-image"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="why-we-image-container"><img
+                                                src="https://images.unsplash.com/photo-1507638940746-7b17d6b55b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80"
+                                                alt="Baker image" class="why-we-image"></div>
+                                    </div>
+
+                                    <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                                        <h3>Формат пекарен «Бриошь»</h3>
+                                        <p>Наши многосторонние форматы пекарен всегда приятно удивят Вас своим
+                                            комфортом и быстрым обслуживанием, где Вы сможете приобрести
+                                            продукцию в формате «возьми с собой», или же посетить нас для
+                                            завтрака, обеда, деловых встреч за чашкой кофе.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                                        <h3>Любые заказы с доставкой</h3>
+                                        <p>Имея свое производство, Пекарня «Бриошь» всегда будет рада исполнить
+                                            для Вас авторские и дизайнерские торты для всех мероприятий или
+                                            доставить любую продукцию для вкусного обеда!
+                                        </p>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div class="why-we-image-container"><img
+                                                src="https://images.unsplash.com/photo-1507638940746-7b17d6b55b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80"
+                                                alt="Baker image" class="why-we-image"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu" id="menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12"
+                                        style="display: flex; flex-direction: column; justify-content: center;align-items: center;">
+                                        <h2>Меню</h2>
+
+                                        <div class="swiper mySwiper">
+                                            <div class="swiper-wrapper">
+
+                                                <div class="swiper-slide">
+                                                    <ul class="menu-list menu-list-1">
+                                                        <li>
+                                                            <h3><a class="popup" style="cursor: pointer">Выпечки</a>
+                                                            </h3>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="swiper-image"><img
+                                                            src="https://images.unsplash.com/photo-1507638940746-7b17d6b55b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80"
+                                                            alt=""></div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <ul class="menu-list menu-list-1">
+                                                        <li>
+                                                            <h3>Первый</h3>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="swiper-image"><img
+                                                            src="https://images.unsplash.com/photo-1507638940746-7b17d6b55b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80"
+                                                            alt=""></div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <h3>Третий</h3>
+                                                    <ul class="menu-list menu-list-1">
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <h3>Четвёртый</h3>
+                                                    <ul class="menu-list menu-list-1">
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <h3>Пятый</h3>
+                                                    <ul class="menu-list menu-list-1">
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <h3>Шестой</h3>
+                                                    <ul class="menu-list menu-list-1">
+
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <h3>Седьмой</h3>
+                                                    <ul class="menu-list menu-list-1">
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <h3>Восьмой</h3>
+                                                    <ul class="menu-list menu-list-1">
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <h3>Девятый</h3>
+                                                    <ul class="menu-list menu-list-1" id="menuList2">
+
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <ul class="menu-price-ul">
+                                                                <li class="menu-price-li">
+                                                                    <div>Цельнозерневой со злаками</div>
+                                                                    <div></div>
+                                                                    <div>780₽</div>
+                                                                </li>
+                                                                <li>
+                                                                    <p>(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                                        какао,
+                                                                        цукаты)</p>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="try" id="try">
+                            <div class="row">
+                                <div class="col">
+                                    <h2>Пекарня «Бриошь» всегда рада удивлять вас своими новинками!</h2>
+                                </div>
+                            </div>
+                            <div class="row" style="padding: 0">
+                                <div class="col-lg-4 col-sm-12" style="object-fit: contain">
+                                    <img src="https://images.unsplash.com/photo-1507638940746-7b17d6b55b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80"
+                                        alt="Image">
+                                    <div id="text" class="ellipse-text">• Lorem ipsum text Lorem ipsum •</div>
+
+                                    <ul>
+                                        <li>
+                                            <p class="item-description">(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                какао,
+                                                цукаты)</p>
+                                        </li>
+                                        <li>
+                                            <p class="item-price">780₽</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-sm-12">
+                                    <img src="https://images.unsplash.com/photo-1507638940746-7b17d6b55b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80"
+                                        alt="Image">
+                                    <div id="text2" class="ellipse-text">• Lorem ipsum text Lorem ipsum •</div>
+                                    <ul>
+                                        <li>
+                                            <p class="item-description">(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                какао,
+                                                цукаты)</p>
+                                        </li>
+                                        <li>
+                                            <p class="item-price">780₽</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-sm-12">
+                                    <img src="https://images.unsplash.com/photo-1507638940746-7b17d6b55b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=416&q=80"
+                                        alt="Image">
+                                    <div id="text3" class="ellipse-text">• Lorem ipsum text Lorem ipsum •</div>
+                                    <ul>
+                                        <li>
+                                            <p class="item-description">(Пшеничная мука, Гиннес, яйца, сливочное масло,
+                                                какао,
+                                                цукаты)</p>
+                                        </li>
+                                        <li>
+                                            <p class="item-price">780₽</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="reviews" id="reviews">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <h2>отзывы</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="feedbacks">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="swiper feedbackSwiper">
+                                                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <ul class="feedback__ul">
+                                                                        <li>
+                                                                            <p class="feedback__text">Разнообразный и
+                                                                                богатый
+                                                                                опыт новая модель
+                                                                                организационной деятельности
+                                                                                обеспечивает
+                                                                                широкому кругу
+                                                                                (специалистов) участие в формировании
+                                                                                модели
+                                                                                развития. Задача
+                                                                                организации, в особенности же реализация
+                                                                                намеченных плановых
+                                                                                заданий играет важную роль в
+                                                                                формировании
+                                                                                позиций, занимаемых
+                                                                                участниками в отношении поставленных
+                                                                                задач.
+                                                                                Товарищи! рамки и
+                                                                                место обучения кадров обеспечивает
+                                                                                широкому
+                                                                                кругу (специалистов)
+                                                                                участие в формировании новых
+                                                                                предложений.
+
+                                                                            </p>
+                                                                            <p class="feedback__author">Имя, постоянный
+                                                                                покупатель</p>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-button-next"></div>
+                                                            <div class="swiper-button-prev"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="find-us container-fluid">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col" id="findUs">
+                                        <h2>где нас найти</h2>
+                                        <div class="row" style="margin: 50px 0;">
+                                            <div class="col-lg-7 col-sm-12">
+                                                <iframe
+                                                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A46bb109b3d45bc28ffb1e121f9d5f0135ef1efb879b4f96006bdaf149479e22a&amp;source=constructor"
+                                                    style="min-width: 100%;" height="600"></iframe>
+
+
+
+                                            </div>
+                                            <div class="col-lg-5 col-sm-12">
+                                                <ul class="find-us-ul">
+                                                    <li>
+                                                        <h3>Адрес</h3>
+                                                        <p>г. Санкт-Петербург, пр-кт Большевиков, 37к1</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Часы работы</h3>
+                                                        <p>Пн—Пт 09:00-18:00</p>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Телефон</h3>
+                                                        <p><a href="tel:+79214349212">+7 (921) 434-92-12</a></p>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Почта</h3>
+                                                        <p><a href="mailto:info@tvoybriosh.ru"
+                                                                target="_blank">info@tvoybriosh.ru</a></p>
+                                                    </li>
+                                                    <li>
+                                                        <h3>Напишите нам в WhatsApp</h3>
+                                                        <p>
+                                                            <a href="https://wa.me/+79319899815" target="_blank"
+                                                                class="wp-a">
+                                                                <span>+7(931) 989-98-15</span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                                                                    height="30" style="margin: 0 10px;"
+                                                                    fill="currentColor" class="bi bi-whatsapp"
+                                                                    viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+                                                                </svg>
+                                                            </a>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row" style="display: flex; align-items: center; justify-content: space-between;">
+                        <div class="col-4">
+                            <ul>
+                                <li><a href="#menu">Меню</a></li>
+                                <li><a href="#discount">Акции</a></li>
+                                <li><a href="#try">Новинки</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <div class="footer-hr"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <img src="img/logo.svg" class="header-logo" alt="Briosh logo image"></div>
+                        <div class="col-4">
+                            <ul>
+                                <li><a href="#whyWe">Почему мы</a></li>
+                                <li><a href="#reviews">Отзывы</a></li>
+                                <li><a href="#findUs">Контакты</a></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <div class="footer-hr"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+        <!-- CircleType.js -->
+        <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+        <!-- Script for circle text -->
+        <script src="libs/text.js"></script>
+
+        <!-- Slick slider -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Script for Slick slider -->
+        <script src="libs/slider.js"></script>
+
+        <!-- Script for YouTube -->
+        <script src="libs/videotube.min.js"></script>
+
+        <!-- Slider -->
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            let swiper = new Swiper(".mySwiper", {
+                effect: "cards",
+                grabCursor: true,
+            });
+
+            let swiper_2 = new Swiper(".feedbackSwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoHeight: true,
+                rewind: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+            });
+        </script>
+
+        <!-- Magnific Popup-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+            integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(document).ready(function () {
+                $(".popup").magnificPopup({
+                    tLoading: '',
+                    removalDelay: 300,
+                    callbacks: {
+
+                        imageLoadComplete: function () {
+                            let self = this;
+                            setTimeout(function () {
+                                self.wrap.addClass('mfp-image-loaded');
+                            }, 16);
+                        },
+                        close: function () {
+                            this.wrap.removeClass('mfp-image-loaded');
+                        },
+                    },
+                    mainClass: 'mfp-fade',
+                    closeBtnInside: false,
+                    closeOnContentClick: true,
+                    midClick: true,
+                    items: [{
+                            src: "https://img02.rl0.ru/afisha/e1200x600i/daily.afisha.ru/uploads/images/b/63/b633cb6ffca4b38d0caf894e3ed17151.png",
+                            title: "Nyan cat.",
+                        },
+                        {
+                            src: "https://img3.akspic.ru/originals/1/5/7/8/5/158751-windows_10-microsoft_windows-korporaciya_microsoft-neboskreb-zdanie-1920x1080.jpg",
+                            title: "Nice photo."
+                        },
+                        {
+                            src: "https://dummyimage.com/1920x1080.png?text=First",
+                            title: "First image description",
+                        },
+                        {
+                            src: "https://dummyimage.com/1920x1080.png?text=Second",
+                            title: "Second image description",
+                        },
+                        {
+                            src: "https://dummyimage.com/1920x1080.png?text=Third",
+                            title: "Third image description",
+                        },
+                        {
+                            src: "https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
+                            title: "Just cake.",
+                        },
+                        {
+                            src: "data:image/jpeg;base64,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",
+                            title: "Some photo",
+                        },
+                        {
+                            src: "https://www.idlememe.com/wp-content/uploads/2021/08/crying-cat-meme-idlememe-3.jpg",
+                            title: "Mood:",
+                        },
+                    ],
+                    type: 'image',
+                    gallery: {
+                        enabled: true,
+                    }
+                });
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
+        <script>
+            const burger = new Pushbar({
+                blur: true,
+                overlay: true,
+            });
+        </script>
+    </body>
+
+    </html>
