@@ -110,6 +110,10 @@ h6 {
     --main-brown-color: #a06a48;
 }
 
+html, body {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #a06a48;
 }
@@ -303,7 +307,7 @@ h1 {
 }
 
 .start__container img {
-    max-width: 80%;
+    max-width: 100%;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 2px;
