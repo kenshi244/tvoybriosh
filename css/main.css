@@ -170,9 +170,10 @@ html::-webkit-scrollbar-thumb {
     color: var(--main-turqoise-color);
 }
 
-.pushbar .btn-danger {
-    background-color: var(--main-turqoise-color);
-    border-color: var(--main-turqoise-color);
+.pushbar .btn-info {
+    background-color: var(--main-turqoise-color) !important;
+    border-color: var(--main-turqoise-color) !important;
+    color: #fff;
 }
 
 /* Pushbar menu background color */
