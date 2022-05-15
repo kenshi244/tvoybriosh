@@ -110,7 +110,8 @@ h6 {
     --main-brown-color: #a06a48;
 }
 
-html, body {
+html,
+body {
     scroll-behavior: smooth;
 }
 
@@ -688,13 +689,94 @@ h1 {
     text-align: center;
 }
 
+.write-review {
+    padding: 0 0 200px 0;
+}
+
+.write-review h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: "Cormorant", serif;
+    font-weight: 550;
+    text-align: left;
+}
+
+.write-review h3 {
+    font-size: 18px;
+    text-align: left;
+    font-family: "Gilroy-Ultralight", serif;
+}
+
+.write-review__image-container {
+    position: relative;
+}
+
+.write-review__image-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 100%;
+    border-top-left-radius: 100%;
+}
+
+.review__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Gilroy-Ultralight", serif;
+}
+
+.write-review input {
+    margin: 20px 0;
+    border: 1px solid #f1f1f1;
+    background-color: transparent;
+    color: #fff;
+    height: 40px;
+    padding: 0 15px;
+    transition: all .2s ease;
+}
+
+.write-review input::placeholder {
+    color: rgb(206, 190, 190);
+}
+
+.write-review textarea {
+    margin: 20px 0;
+    border: 1px solid #f1f1f1;
+    background-color: transparent;
+    color: #fff;
+    padding: 15px;
+}
+
+.write-review textarea::placeholder {
+    color: rgb(206, 190, 190);
+}
+
+.write-review input.error {
+    box-shadow: 0 0 10px #CC0000;
+}
+
+.write-review button {
+    width: 60%;
+    background-color: rgb(200, 135, 16);
+    height: 40px;
+    color: #f1f1f1;
+}
+
 .find-us h2 {
+    color: #fff;
     font-size: 50px;
     text-transform: uppercase;
     font-family: "Cormorant", serif;
     font-weight: 550;
     text-align: center;
     margin: 60px 0 30px 0;
+}
+
+.find-us h3 {
+    color: #fff;
 }
 
 .find-us-ul {
