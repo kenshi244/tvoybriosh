@@ -709,16 +709,15 @@ h1 {
 
 .write-review__image-container {
     position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .write-review__image-container img {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: auto;
-    border-bottom-left-radius: 100%;
-    border-top-left-radius: 100%;
+    border-bottom-left-radius: 5000px;
+    border-top-left-radius: 1000px;
 }
 
 .review__form {
