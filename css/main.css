@@ -498,7 +498,7 @@ h1 {
 .menu .swiper {
     padding: 20px 0 0 0;
     width: 75%;
-    height: 700px;
+    min-height: 700px;
 }
 
 .menu .swiper-slide {
@@ -509,7 +509,6 @@ h1 {
     font-size: 22px;
     color: #fff;
 }
-
 
 .swiper-slide img {
     margin: 0 45px;
@@ -557,7 +556,15 @@ h1 {
     justify-content: space-between;
 }
 
-.menu-price-li div:nth-child(2) {
+.menu-price-li h4 {
+    font-size: 20px;
+}
+
+.menu-price-li h5 {
+    font-size: 18px;
+}
+
+.menu-price-li div {
     flex: 1 0;
     border-bottom: 2px dotted rgba(255, 255, 255, .6);
     height: 1em;
