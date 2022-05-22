@@ -529,7 +529,7 @@ h1 {
 }
 
 .swiper ul li ul li p {
-    font-size: 12px;
+    font-size: 13px;
     color: rgba(255, 255, 255, 0.788);
 }
 
@@ -546,9 +546,15 @@ h1 {
 }
 
 .menu-list>li {
+    width: 100%;
     display: inline-block;
     align-self: center;
     justify-self: center;
+}
+
+.menu-list>li:nth-child(1) {
+    display: flex;
+    justify-content: center;
 }
 
 .menu-price-ul li {
@@ -562,6 +568,7 @@ h1 {
 
 .menu-price-li h5 {
     font-size: 18px;
+    white-space: nowrap;
 }
 
 .menu-price-li div {
@@ -662,9 +669,11 @@ h1 {
 }
 
 .feedbacks .swiper-slide {
+    cursor: grab;
     text-align: center;
     font-size: 16px;
-    padding: 20px 90px;
+    padding: 50px;
+    width: 100%;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -678,6 +687,11 @@ h1 {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+}
+
+.feedbacks ul {
+    margin: 0;
+    padding: 0;
 }
 
 .feedback__text {
@@ -697,7 +711,7 @@ h1 {
 }
 
 .write-review {
-    padding: 0 0 200px 0;
+    padding: 0;
 }
 
 .write-review h2 {
