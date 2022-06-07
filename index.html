@@ -79,6 +79,9 @@
                 <li><a href="#findUs" onclick="burger.close();">
                         Контакты
                     </a></li>
+                <li><a href="#write" onclick="burger.close();">
+                        Оставьте отзыв
+                    </a></li>
             </ul>
 
             <button data-pushbar-close class="btn btn-info">Закрыть</button>
@@ -1570,21 +1573,22 @@
                                             </div>
                                         </div>
 
-                                        <div class="write-review">
-                                            <div class="container">
+                                        <div class="write-review write-review__container" style="padding: 20px 0;" id="write">
+                                            <div class="container-fluid">
                                                 <div class="row">
                                                     <div
                                                         class="col-sm-12 col-md-5 d-flex flex-column justify-content-center">
                                                         <h2>Оставьте ваш отзыв</h2>
-                                                        <h3>Ваше мнение очень важно для нас, оставьте ваш отзыв, и при необходимости мы свяжемся с вами и решим ваш вопрос!</h3>
+                                                        <h3>Ваше мнение очень важно для нас, оставьте ваш отзыв, и при
+                                                            необходимости мы свяжемся с вами и решим ваш вопрос!</h3>
                                                         <form action="" class="review__form">
-                                                            <input type="text" placeholder="Имя и фамилия" required>
+                                                            <input type="text" placeholder="Ваше имя" required>
                                                             <input class="input__telephone" id="telephoneInput"
-                                                                type="text" placeholder="Номер телефона"
+                                                                type="text" placeholder="Ваш номер телефона"
                                                                 pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
                                                                 required>
                                                             <input type="text" class="input__email"
-                                                                placeholder="Адрес электронной почты"
+                                                                placeholder="Ваш адрес электронной почты"
                                                                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
                                                                 required>
                                                             <textarea name="review" id="reviewTextarea" cols="30"
@@ -1619,6 +1623,7 @@
                                                                 <li>
                                                                     <h3>Адрес</h3>
                                                                     <p>г. Санкт-Петербург, пр-кт Большевиков, 37к1</p>
+                                                                    <p>г. Санкт-Петербург, пр-кт Среднеохтинский, 14</p>
                                                                 </li>
                                                                 <li>
                                                                     <h3>Часы работы</h3>
@@ -1660,6 +1665,10 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
 
             <footer class="footer">
@@ -1696,7 +1705,8 @@
             </footer>
         </div>
 
-        <script src="libs/validate.js"></script>
+        <script src="libs/mail.js"></script>
+        <script src="libs/form.js"></script>
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -1820,6 +1830,7 @@
                 overlay: true,
             });
         </script>
+
     </body>
 
     </html>
