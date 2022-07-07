@@ -300,12 +300,12 @@ h1 {
     min-width: 100%;
 }
 
-.logo-container {
-    margin: 20px;
+main.main {
+    color: #fff;
 }
 
-.start {
-    color: #fff;
+.logo-container {
+    margin: 20px;
 }
 
 .start__container {
@@ -343,7 +343,7 @@ h1 {
     line-height: 33px;
     color: rgba(255, 255, 255, .8);
     text-align: left;
-    max-width: 90%;
+    min-width: 100%;
 }
 
 .start__container a {
@@ -471,6 +471,12 @@ h1 {
     color: rgba(255, 255, 255, 0.8);
 }
 
+.why-we .number {
+    text-align: center;
+    font-size: 150px;
+    font-family: "Cormorant", serif;
+}
+
 .why-we-image-container {
     position: relative;
     min-height: 250px;
@@ -503,7 +509,6 @@ h1 {
 .menu .swiper {
     padding: 20px 0 0 0;
     width: 50%;
-    min-height: 700px;
 }
 
 .menu .swiper-slide {
@@ -536,6 +541,15 @@ h1 {
 .swiper ul li ul li p {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.788);
+}
+
+.image-link {
+    color: inherit;
+    transition: all .2s ease;
+}
+
+.image-link:hover {
+    color: rgba(255, 255, 255, 0.618);
 }
 
 .menu-list li {
@@ -655,7 +669,7 @@ h1 {
 }
 
 .reviews {
-    padding: 100px 0;
+    padding: 100px 0 0 0;
 }
 
 .reviews h2 {
@@ -671,6 +685,12 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: 50px 0;
+}
+
+.feedbacks .swiper {
+    padding: 20px 0 0 0;
+    width: 70%;
+    min-height: 450px;
 }
 
 .feedbacks .swiper-slide {
@@ -716,7 +736,7 @@ h1 {
 }
 
 .write-review {
-    padding: 0;
+    padding: 20px 0;
 }
 
 .write-review h2 {
@@ -748,6 +768,7 @@ h1 {
 
 .write-review__container {
     position: relative;
+    margin: 60px 0;
 }
 
 .write-review__container::after {
@@ -913,7 +934,6 @@ h1 {
 
 .mfp-fade.mfp-bg {
     opacity: 0;
-
     -webkit-transition: all 0.15s ease-out;
     -moz-transition: all 0.15s ease-out;
     transition: all 0.15s ease-out;
@@ -951,17 +971,23 @@ h1 {
 .telegram-icon__container {
     background: #fff;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     transition: all .3s ease-in-out;
+    z-index: 100;
 }
 
 .telegram-icon__container:hover {
     transform: translateY(-15px);
+}
+
+.telegram-icon {
+    width: 40px;
+    height: 40px;
 }
